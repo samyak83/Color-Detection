@@ -12,3 +12,27 @@ OpenCV, Pandas, and numpy are the Python packages that are necessary for this pr
 [pip install opencv-python numpy pandas]
 
 # Steps for Building a Project in Python – Color Detection
+# 1. Download and unzip the zip file
+The project folder contains 3 files:
+
+1)Color_detection.py – main source code of our project.   
+2)Col.jpg – sample image for experimenting.   
+3)Colors.csv – a file that contains our dataset.
+
+# 2. Taking an image from the user
+We are using argparse library to create an argument parser. We can directly give an image path from the command prompt:   
+      
+import argparse   
+ap = argparse.ArgumentParser()    
+ap.add_argument('-i', '--image', required=True, help="Image Path")    
+args = vars(ap.parse_args())    
+img_path = args['image']    
+#Reading image with opencv    
+img = cv2.imread(img_path)    
+
+# 3. Next, we read the CSV file with pandas
+The pandas library is very useful when we need to perform various operations on data files like CSV. pd.read_csv() reads the CSV file and loads it into the pandas DataFrame. We have assigned each column with a name for easy accessing.
+
+#Reading csv file with pandas and giving names to each column   
+index=["color","color_name","hex","R","G","B"]  
+csv = pd.read_csv('colors.csv', names=index, header=None) 
