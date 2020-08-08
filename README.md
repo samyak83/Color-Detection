@@ -99,6 +99,6 @@ Using the cv2.imshow() function, we draw the image on the window. When the user 
       cv2.destroyAllWindows()                         
 
 # 8. Run Python File
-The beginner Python project is now complete, you can run the Python file from the command prompt. Make sure to give an image path using ‘-i’ argument. If the image is in another directory, then you need to give full path of the image:                        
+The beginner Python project is now complete, you can run the Python file from the command prompt. Make sure to give an image path using ‘-i’ argument. If the image is in another directory, then you need to give full path of the image:-                     
 
           python color_detection.py -i <add your image path here>                 
